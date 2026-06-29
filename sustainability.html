@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability - Ibraheem Industries</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-2xl font-bold text-emerald-800">
+                            <i class="fas fa-seedling text-amber-500"></i> 
+                            <span class="ml-2">Ibraheem Industries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">About Us</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Products</a>
+                    <a href="operations.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Operations</a>
+                    <a href="quality.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Quality</a>
+                    <a href="sustainability.html" class="nav-link active text-emerald-800 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Sustainability</a>
+                    <a href="media.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Media</a>
+                    <a href="contact.html" class="bg-amber-500 text-white hover:bg-amber-600 px-6 py-2 rounded-md text-sm font-semibold transition">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-amber-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">About Us</a>
+                <a href="products.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Products</a>
+                <a href="operations.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Operations</a>
+                <a href="quality.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Quality</a>
+                <a href="sustainability.html" class="block px-3 py-2 text-emerald-800 font-semibold">Sustainability</a>
+                <a href="media.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Media</a>
+                <a href="contact.html" class="block px-3 py-2 text-amber-600 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center mt-20 bg-cover bg-center" style="background-image: linear-gradient(rgba(6, 78, 59, 0.85), rgba(4, 47, 46, 0.85)), url('./images/hero-wheat-fields.jpg');">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Sustainability & Sourcing</h1>
+            <p class="text-xl text-gray-200">Supporting Pakistani Farmers, Protecting Our Planet's Future</p>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Our Sustainability Approach</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We believe that profitable business and sustainable practices are not mutually exclusive. Our success is built on empowering local farmers, protecting natural resources, and investing in the communities that make our work possible.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-3xl text-green-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Environmental Stewardship</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Promoting water conservation, soil health, reduced chemical use, and eco-friendly farming practices across our supply chain.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-3xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Fair Trade & Ethics</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Fair pricing, timely payments, and long-term partnerships that provide financial security to farming families.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-3xl text-blue-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Community Development</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Investing in education, healthcare, infrastructure, and technical training programs in rural agricultural areas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supporting Local Farmers -->
+    <section class="py-20 bg-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="./images/pakistani-farmers-punjab.jpg" 
+                         alt="Local Pakistani farmers" 
+                         class="rounded-lg shadow-2xl">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold text-emerald-900 mb-6">Supporting Local Farmers</h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Over 3,000 smallholder farmers across Punjab and Sindh are part of our direct sourcing network. We've built relationships spanning generations, ensuring mutual trust and shared prosperity.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-dollar-sign text-emerald-700 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-900 text-lg mb-2">Fair & Transparent Pricing</h4>
+                                <p class="text-gray-600">We pay competitive market rates with transparent contracts. No hidden deductions or delayed payments—farmers receive their earnings within 48 hours of delivery.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-book text-emerald-700 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-900 text-lg mb-2">Agricultural Training Programs</h4>
+                                <p class="text-gray-600">Free workshops on modern farming techniques, pest management, water efficiency, and organic farming methods. We've trained over 1,200 farmers in the past five years.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-seedling text-emerald-700 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-900 text-lg mb-2">Seed & Input Support</h4>
+                                <p class="text-gray-600">Providing access to high-quality seeds, fertilizers, and organic pesticides at subsidized rates through cooperative bulk purchasing programs.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-emerald-100 rounded-full p-3 mr-4">
+                                <i class="fas fa-shield-alt text-emerald-700 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-900 text-lg mb-2">Crop Insurance Assistance</h4>
+                                <p class="text-gray-600">Helping farmers access government crop insurance schemes to protect against weather-related losses and market volatility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eco-Friendly Practices -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Eco-Friendly Farming Practices</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Working with farmers to adopt sustainable agricultural methods that protect soil, water, and biodiversity
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tint text-2xl text-blue-700"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-emerald-900 mb-3">Water Conservation</h3>
+                    <p class="text-gray-600 text-sm">
+                        Drip irrigation systems and scheduled watering reduce water usage by 30-40% compared to traditional flood irrigation.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-recycle text-2xl text-green-700"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-emerald-900 mb-3">Organic Fertilizers</h3>
+                    <p class="text-gray-600 text-sm">
+                        Promoting compost, green manure, and bio-fertilizers to reduce chemical dependency and improve soil health.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-yellow-50 to-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bug text-2xl text-yellow-700"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-emerald-900 mb-3">Integrated Pest Management</h3>
+                    <p class="text-gray-600 text-sm">
+                        Natural pest control methods and targeted pesticide use minimizing environmental impact and residues.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sync-alt text-2xl text-purple-700"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-emerald-900 mb-3">Crop Rotation</h3>
+                    <p class="text-gray-600 text-sm">
+                        Encouraging diversified cropping patterns to maintain soil fertility and reduce pest buildup naturally.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Investment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Community Development Initiatives</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Beyond business, we invest in the wellbeing and future of farming communities
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-3xl text-blue-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Education Programs</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Scholarship programs for farmers' children and adult literacy classes in rural areas. We've supported 200+ students in higher education since 2015.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i>School supplies donations</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i>Computer literacy programs</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i>Vocational training centers</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-3xl text-red-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Healthcare Access</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Mobile medical camps and partnerships with rural health clinics providing free checkups, medicines, and maternal healthcare services.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i>Quarterly health screenings</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i>Vaccination drives</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i>Clean water initiatives</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-road text-3xl text-green-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Infrastructure Development</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Co-funding rural road improvements, irrigation channel repairs, and community center construction in partnership with local governments.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i>Rural road paving projects</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i>Solar panel installations</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i>Storage facility upgrades</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-emerald-900 text-white p-10 rounded-lg text-center">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="text-4xl font-bold text-amber-400 mb-2">3,000+</div>
+                        <p class="text-gray-200">Farmers in Network</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-amber-400 mb-2">1,200</div>
+                        <p class="text-gray-200">Trained in Sustainable Practices</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-amber-400 mb-2">200+</div>
+                        <p class="text-gray-200">Education Scholarships</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-amber-400 mb-2">15</div>
+                        <p class="text-gray-200">Villages Supported</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-emerald-900 to-emerald-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Partner with Purpose</h2>
+            <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                When you source from Ibraheem Industries, you're supporting sustainable agriculture and thriving rural communities in Pakistan
+            </p>
+            <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-md text-lg font-semibold transition transform hover:scale-105">
+                Learn More About Our Impact
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        <i class="fas fa-seedling text-amber-500"></i> Ibraheem Industries
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Exporting Pakistan's premium harvest to the world with quality, integrity, and excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-amber-500">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-amber-500">Products</a></li>
+                        <li><a href="quality.html" class="hover:text-amber-500">Quality Assurance</a></li>
+                        <li><a href="sustainability.html" class="hover:text-amber-500">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#sugar" class="hover:text-amber-500">Sugar Import/Export</a></li>
+                        <li><a href="products.html#flour" class="hover:text-amber-500">Flour Import/Export</a></li>
+                        <li><a href="products.html#oil" class="hover:text-amber-500">Edible Oils</a></li>
+                        <li><a href="products.html#rice" class="hover:text-amber-500">Premium Rice</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Plot No. 56-B, Landhi Industrial Zone, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone text-amber-500 mr-2"></i> Tel: +92-21-5053786</li>
+                        <li><i class="fas fa-fax text-amber-500 mr-2"></i> Fax: +92-21-5056745</li>
+                        <li><i class="fas fa-envelope text-amber-500 mr-2"></i> ibraheemindustries@atomicmail.io</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-500">© 2026 Ibraheem Industries. All rights reserved. | Exporting Excellence Since 2006</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

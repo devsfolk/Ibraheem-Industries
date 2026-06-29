@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Ibraheem Industries</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        .tab-button.active {
+            background: #064e3b;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-2xl font-bold text-emerald-800">
+                            <i class="fas fa-seedling text-amber-500"></i> 
+                            <span class="ml-2">Ibraheem Industries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">About Us</a>
+                    <a href="products.html" class="nav-link active text-emerald-800 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Products</a>
+                    <a href="operations.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Operations</a>
+                    <a href="quality.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Quality</a>
+                    <a href="sustainability.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Sustainability</a>
+                    <a href="media.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Media</a>
+                    <a href="contact.html" class="bg-amber-500 text-white hover:bg-amber-600 px-6 py-2 rounded-md text-sm font-semibold transition">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-amber-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">About Us</a>
+                <a href="products.html" class="block px-3 py-2 text-emerald-800 font-semibold">Products</a>
+                <a href="operations.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Operations</a>
+                <a href="quality.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Quality</a>
+                <a href="sustainability.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Sustainability</a>
+                <a href="media.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Media</a>
+                <a href="contact.html" class="block px-3 py-2 text-amber-600 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center mt-20 bg-cover bg-center" style="background-image: linear-gradient(rgba(6, 78, 59, 0.85), rgba(4, 47, 46, 0.85)), url('./images/hero-wheat-fields.jpg');">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Global Trade Solutions</h1>
+            <p class="text-xl text-gray-200">Premier Import & Export Services for Agricultural Commodities</p>
+            <p class="text-lg text-gray-300 mt-2">Connecting International Markets with Quality Products Since 2006</p>
+        </div>
+    </section>
+
+    <!-- Product Tabs Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Introduction -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-emerald-900 mb-6">Our Trade Portfolio</h2>
+                <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-4">
+                    Ibraheem Industries specializes in comprehensive <strong>import and export services</strong> for premium agricultural commodities. 
+                    With two decades of international trade experience, we facilitate seamless cross-border transactions, ensuring quality compliance, 
+                    timely delivery, and competitive pricing for our global partners.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-8">
+                    <div class="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-600">
+                        <h3 class="text-xl font-bold text-emerald-900 mb-2"><i class="fas fa-ship mr-2"></i>Import Services</h3>
+                        <p class="text-gray-700">We source quality products from Brazil, India, Thailand, Malaysia, Indonesia, Ukraine, Russia, and Australia for distribution in Pakistan and regional markets.</p>
+                    </div>
+                    <div class="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-600">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2"><i class="fas fa-plane-departure mr-2"></i>Export Services</h3>
+                        <p class="text-gray-700">We export premium Pakistani commodities to the Middle East, Africa, Central Asia, Europe, and beyond, meeting international quality standards.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="tab-button active px-8 py-3 rounded-lg font-semibold text-lg border-2 border-emerald-800" data-tab="sugar">
+                    <i class="fas fa-cube mr-2"></i>Sugar
+                </button>
+                <button class="tab-button px-8 py-3 rounded-lg font-semibold text-lg border-2 border-emerald-800" data-tab="flour">
+                    <i class="fas fa-wheat-awn mr-2"></i>Flour
+                </button>
+                <button class="tab-button px-8 py-3 rounded-lg font-semibold text-lg border-2 border-emerald-800" data-tab="oil">
+                    <i class="fas fa-bottle-droplet mr-2"></i>Oil
+                </button>
+                <button class="tab-button px-8 py-3 rounded-lg font-semibold text-lg border-2 border-emerald-800" data-tab="rice">
+                    <i class="fas fa-seedling mr-2"></i>Rice
+                </button>
+            </div>
+
+            <!-- Sugar Tab Content -->
+            <div id="sugar" class="tab-content active">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-emerald-900 mb-6">Sugar - Import & Export Solutions</h2>
+                    <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-4">
+                        Ibraheem Industries provides comprehensive <strong>import and export services</strong> for refined sugar products meeting international ICUMSA standards. 
+                        We source premium sugar from Brazil, India, Thailand, and Pakistan, and distribute to markets across the Middle East, Africa, and Asia.
+                    </p>
+                    <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                        Our sugar trade division handles complete logistics from mill to destination, including quality inspection, certification, 
+                        fumigation, container stuffing, and documentation compliance for seamless international transactions.
+                    </p>
+                </div>
+
+                <!-- Import/Export Overview -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-blue-50 p-8 rounded-lg border-2 border-blue-200">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-4"><i class="fas fa-download mr-2"></i>Import Sources</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Brazil:</strong> ICUMSA 45, VHP Raw Sugar</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>India:</strong> S-30, M-30, ICUMSA 100-150</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Thailand:</strong> Refined White Sugar, Raw Sugar</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Pakistan:</strong> Domestic refined sugar for re-export</li>
+                        </ul>
+                    </div>
+                    <div class="bg-amber-50 p-8 rounded-lg border-2 border-amber-200">
+                        <h3 class="text-2xl font-bold text-amber-900 mb-4"><i class="fas fa-upload mr-2"></i>Export Destinations</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>Middle East:</strong> UAE, Saudi Arabia, Oman, Kuwait</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>Africa:</strong> Kenya, Tanzania, Somalia, Sudan</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>Central Asia:</strong> Afghanistan, Tajikistan</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>South Asia:</strong> Sri Lanka, Bangladesh</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sugar Product Varieties -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+                    
+                    <!-- White Refined Sugar ICUMSA 45 -->
+                    <div class="bg-gradient-to-br from-white to-blue-50 p-8 rounded-lg shadow-lg border border-blue-200">
+                        <img src="./images/sugar-icumsa45-refined.jpg" 
+                             alt="Refined White Sugar ICUMSA 45" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">White Refined Sugar (ICUMSA 45)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Premium crystal white sugar with the highest refining standards. Ideal for beverages, confectionery, pharmaceutical applications, 
+                            and food manufacturing requiring pure white color and neutral taste.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">ICUMSA Color</td><td class="py-2 text-gray-600">Max 45 IU</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Polarization (Pol %)</td><td class="py-2 text-gray-600">99.80% minimum</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">Max 0.04%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Ash Content</td><td class="py-2 text-gray-600">Max 0.04%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Sulphur Dioxide</td><td class="py-2 text-gray-600">Max 20 mg/kg</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Granulation</td><td class="py-2 text-gray-600">Fine (0.6-0.9mm)</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Solubility</td><td class="py-2 text-gray-600">100% dry and free-flowing</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Radiation</td><td class="py-2 text-gray-600">Max 50 Bq/Kg</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Quality Certifications</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">ISO 9001:2015</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">HACCP</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Halal Certified</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Kosher Certified</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">SGS Inspected</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging Options</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-blue-600 mr-2"></i>1kg, 2kg, 5kg retail PP bags with custom branding</li>
+                                <li><i class="fas fa-box text-blue-600 mr-2"></i>25kg, 50kg industrial PP woven bags</li>
+                                <li><i class="fas fa-box text-blue-600 mr-2"></i>1000kg jumbo bags (FIBC) for bulk buyers</li>
+                                <li><i class="fas fa-box text-blue-600 mr-2"></i>Bulk containers: 20ft (25 MT), 40ft (27 MT)</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Storage & Handling</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Store in cool, dry warehouses with humidity control (max 60%). Protect from moisture, direct sunlight, and strong odors. 
+                                Stack maximum 10 bags high. Shelf life: 24 months from production date under proper storage conditions.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Minimum Order (MOQ)</p>
+                                <p class="text-gray-600">100 MT (4 containers)</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Lead Time</p>
+                                <p class="text-gray-600">15-25 days from payment</p>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- White Refined Sugar ICUMSA 100-150 -->
+                    <div class="bg-gradient-to-br from-white to-blue-50 p-8 rounded-lg shadow-lg border border-blue-200">
+                        <img src="./images/sugar-icumsa-100-150.jpg" 
+                             alt="Refined White Sugar ICUMSA 100-150" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">White Refined Sugar (ICUMSA 100-150)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            High-quality refined sugar with slightly higher color units, offering excellent value for industrial food processing, 
+                            bakery products, dairy manufacturing, and food service operations.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">ICUMSA Color</td><td class="py-2 text-gray-600">100-150 IU</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Polarization (Pol %)</td><td class="py-2 text-gray-600">99.70% minimum</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">Max 0.06%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Ash Content</td><td class="py-2 text-gray-600">Max 0.06%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Sulphur Dioxide</td><td class="py-2 text-gray-600">Max 30 mg/kg</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Granulation</td><td class="py-2 text-gray-600">Medium (0.8-1.2mm)</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Reducing Sugars</td><td class="py-2 text-gray-600">Max 0.05%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging Options</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-blue-600 mr-2"></i>50kg PP woven bags (most common)</li>
+                                <li><i class="fas fa-box text-blue-600 mr-2"></i>1000kg jumbo bags for industrial use</li>
+                                <li><i class="fas fa-box text-blue-600 mr-2"></i>Bulk shipments in containers</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Minimum Order</p>
+                                <p class="text-gray-600">100 MT</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Lead Time</p>
+                                <p class="text-gray-600">15-20 days</p>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Brown Sugar -->
+                    <div class="bg-gradient-to-br from-white to-amber-50 p-8 rounded-lg shadow-lg border border-amber-200">
+                        <img src="./images/sugar-brown-raw.jpg" 
+                             alt="Brown Sugar" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Brown Sugar (ICUMSA 600-1200)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Rich molasses-flavored brown sugar perfect for baking, specialty beverages, sauces, marinades, 
+                            and premium food products requiring natural caramel notes and enhanced flavor profile.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">ICUMSA Color</td><td class="py-2 text-gray-600">600-1200 IU</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Polarization</td><td class="py-2 text-gray-600">96.0% minimum</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">Max 0.15%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Ash Content</td><td class="py-2 text-gray-600">Max 0.25%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Molasses Content</td><td class="py-2 text-gray-600">3-10%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Texture</td><td class="py-2 text-gray-600">Soft and moist</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging Options</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-amber-600 mr-2"></i>500g, 1kg, 5kg moisture-sealed bags</li>
+                                <li><i class="fas fa-box text-amber-600 mr-2"></i>25kg bags for food service</li>
+                                <li><i class="fas fa-box text-amber-600 mr-2"></i>Custom retail packaging available</li>
+                            </ul>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Raw Sugar -->
+                    <div class="bg-gradient-to-br from-white to-yellow-50 p-8 rounded-lg shadow-lg border border-yellow-200">
+                        <img src="./images/sugar-vhp-raw.jpg" 
+                             alt="Raw Sugar" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Raw Sugar (VHP - Very High Polarization)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Unrefined cane sugar with high sucrose content, ideal for refineries and sugar mills for further processing. 
+                            Golden brown color with natural molasses coating, suitable for industrial refining operations.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Polarization</td><td class="py-2 text-gray-600">Min 96.0%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">ICUMSA Color</td><td class="py-2 text-gray-600">600-1500 IU</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">Max 0.25%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Ash Content</td><td class="py-2 text-gray-600">Max 0.40%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Reducing Sugars</td><td class="py-2 text-gray-600">Max 1.2%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging</h4>
+                            <p class="text-gray-700">Bulk shipments in containers or break bulk vessels. Typical container loading: 26-27 MT per 20ft container.</p>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Trade Terms & Logistics -->
+                <div class="bg-gradient-to-r from-emerald-900 to-emerald-800 p-8 rounded-lg shadow-xl mb-12 text-white">
+                    <h3 class="text-3xl font-bold mb-6 text-center">Trade Terms & Pricing Structure</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-ship mr-2 text-amber-400"></i>FOB (Free on Board)</h4>
+                            <p class="text-gray-200 text-sm">
+                                Sugar loaded on vessel at origin port. Buyer arranges and pays for ocean freight and insurance. 
+                                Common for Brazil, Thailand shipments.
+                            </p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-anchor mr-2 text-amber-400"></i>CIF (Cost, Insurance, Freight)</h4>
+                            <p class="text-gray-200 text-sm">
+                                Complete delivery to destination port including freight and insurance. 
+                                Most preferred term for import operations to Pakistan and export to regional markets.
+                            </p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-truck mr-2 text-amber-400"></i>CFR (Cost and Freight)</h4>
+                            <p class="text-gray-200 text-sm">
+                                Similar to CIF but insurance arranged by buyer. Competitive pricing option for experienced importers 
+                                with own insurance arrangements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation & Quality Inspection -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-emerald-600">
+                        <h3 class="text-2xl font-bold text-emerald-900 mb-4"><i class="fas fa-file-contract mr-2"></i>Export Documentation</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Commercial Invoice</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Packing List</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Bill of Lading (B/L)</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Certificate of Origin</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Health/Phytosanitary Certificate</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>SGS/Intertek Quality Inspection Report</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Halal Certificate (if required)</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Fumigation Certificate</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-amber-600">
+                        <h3 class="text-2xl font-bold text-amber-900 mb-4"><i class="fas fa-clipboard-check mr-2"></i>Quality Inspection Protocol</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-microscope text-amber-600 mr-2"></i><strong>Pre-shipment Inspection:</strong> SGS/Intertek lab testing at origin</li>
+                            <li><i class="fas fa-vial text-amber-600 mr-2"></i><strong>Parameters Tested:</strong> ICUMSA color, pol%, moisture, ash, granulation</li>
+                            <li><i class="fas fa-shield-alt text-amber-600 mr-2"></i><strong>Food Safety:</strong> Microbiological testing, heavy metals, pesticide residues</li>
+                            <li><i class="fas fa-certificate text-amber-600 mr-2"></i><strong>Certification:</strong> ISO 9001, HACCP, Halal, Kosher compliance</li>
+                            <li><i class="fas fa-truck-loading text-amber-600 mr-2"></i><strong>Container Inspection:</strong> Verification of cleanliness and stuffing</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Flour Tab Content -->
+            <div id="flour" class="tab-content">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-emerald-900 mb-6">Flour - Import & Export Solutions</h2>
+                    <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-4">
+                        Ibraheem Industries specializes in <strong>import and export</strong> of premium wheat flour and specialty flour products. 
+                        We import high-protein milling wheat from Ukraine, Russia, and Australia, and export value-added flour products 
+                        from Pakistani mills to Afghanistan, Sri Lanka, UAE, and East African markets.
+                    </p>
+                    <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                        Our flour division ensures consistent quality through laboratory testing of protein content, ash content, gluten strength, 
+                        and falling number analysis. Complete traceability from mill to end customer.
+                    </p>
+                </div>
+
+                <!-- Import/Export Overview -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-blue-50 p-8 rounded-lg border-2 border-blue-200">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-4"><i class="fas fa-download mr-2"></i>Import Sources</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Ukraine:</strong> Milling wheat (11-13% protein), Grade 2-3</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Russia:</strong> Soft wheat, hard wheat for blending</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Australia:</strong> Premium APW, H2 milling wheat</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Canada:</strong> CWRS (Canadian Western Red Spring) - specialty orders</li>
+                        </ul>
+                    </div>
+                    <div class="bg-amber-50 p-8 rounded-lg border-2 border-amber-200">
+                        <h3 class="text-2xl font-bold text-amber-900 mb-4"><i class="fas fa-upload mr-2"></i>Export Destinations</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>Afghanistan:</strong> Atta, maida, fortified flour</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>Sri Lanka:</strong> Wheat flour, bread flour</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>UAE:</strong> Chakki atta, specialty flour</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>East Africa:</strong> Kenya, Tanzania, Uganda</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Flour Product Varieties -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+                    
+                    <!-- All-Purpose Flour -->
+                    <div class="bg-gradient-to-br from-white to-amber-50 p-8 rounded-lg shadow-lg border border-amber-200">
+                        <img src="./images/flour-all-purpose-maida.jpg" 
+                             alt="All-Purpose Flour" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">All-Purpose Wheat Flour (Maida)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Fine-milled refined white flour suitable for baking, pastries, noodles, and general culinary applications. 
+                            Bleached or unbleached options available. Ideal for biscuit manufacturing, confectionery, and food service.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Protein Content</td><td class="py-2 text-gray-600">10-11%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Ash Content</td><td class="py-2 text-gray-600">0.45-0.55%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">Max 14%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Wet Gluten</td><td class="py-2 text-gray-600">24-26%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Falling Number</td><td class="py-2 text-gray-600">300+ seconds</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Particle Size</td><td class="py-2 text-gray-600">Fine (90% pass 150μm)</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Extraction Rate</td><td class="py-2 text-gray-600">72-75%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Quality Certifications</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">ISO 22000</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">HACCP</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Halal</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Fortified (Optional)</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging Options</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-amber-600 mr-2"></i>1kg, 5kg, 10kg PP bags for retail</li>
+                                <li><i class="fas fa-box text-amber-600 mr-2"></i>25kg, 50kg multi-layer paper/PE bags</li>
+                                <li><i class="fas fa-box text-amber-600 mr-2"></i>Custom branding and private labeling</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Storage & Shelf Life</h4>
+                            <p class="text-gray-700 text-sm">Store in cool, dry, pest-free warehouses. Avoid moisture and direct sunlight. Shelf life: 6-9 months in sealed packaging.</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Minimum Order</p>
+                                <p class="text-gray-600">20 MT (1 container)</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Lead Time</p>
+                                <p class="text-gray-600">10-15 days</p>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Bread Flour -->
+                    <div class="bg-gradient-to-br from-white to-amber-50 p-8 rounded-lg shadow-lg border border-amber-200">
+                        <img src="./images/flour-bread-high-protein.jpg" 
+                             alt="Bread Flour" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Bread Flour (High Protein)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            High-protein flour specially milled for commercial bread production. Strong gluten development ensures excellent 
+                            dough elasticity, volume, and texture. Ideal for bakeries, industrial bread lines, and pizza bases.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Protein Content</td><td class="py-2 text-gray-600">12-13.5%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Ash Content</td><td class="py-2 text-gray-600">0.50-0.60%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">Max 14%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Wet Gluten</td><td class="py-2 text-gray-600">28-32%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Falling Number</td><td class="py-2 text-gray-600">350-450 seconds</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Water Absorption</td><td class="py-2 text-gray-600">60-64%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-amber-600 mr-2"></i>25kg, 50kg bags for commercial bakeries</li>
+                                <li><i class="fas fa-box text-amber-600 mr-2"></i>Bulk deliveries for industrial operations</li>
+                            </ul>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Chakki Atta -->
+                    <div class="bg-gradient-to-br from-white to-yellow-50 p-8 rounded-lg shadow-lg border border-yellow-200">
+                        <img src="./images/flour-chakki-atta-whole-wheat.jpg" 
+                             alt="Chakki Atta" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Chakki Atta (Whole Wheat Flour)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Stone-ground whole wheat flour retaining natural bran and germ for authentic roti, chapati, and paratha. 
+                            Popular in Pakistan, India, and South Asian diaspora communities. High fiber, nutritious, and traditional taste.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Protein Content</td><td class="py-2 text-gray-600">11-12%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Ash Content</td><td class="py-2 text-gray-600">1.4-1.8% (whole grain)</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">Max 13%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Fiber Content</td><td class="py-2 text-gray-600">10-12%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Extraction Rate</td><td class="py-2 text-gray-600">95-100% (whole wheat)</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-yellow-600 mr-2"></i>5kg, 10kg, 20kg bags for retail</li>
+                                <li><i class="fas fa-box text-yellow-600 mr-2"></i>Private labeling for ethnic stores</li>
+                            </ul>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Self-Rising Flour -->
+                    <div class="bg-gradient-to-br from-white to-pink-50 p-8 rounded-lg shadow-lg border border-pink-200">
+                        <img src="./images/flour-self-rising.jpg" 
+                             alt="Self-Rising Flour" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Self-Rising Flour</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            All-purpose flour premixed with baking powder and salt. Convenient for quick breads, cakes, muffins, and biscuits. 
+                            Time-saving solution for home bakers and food service operations.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Protein Content</td><td class="py-2 text-gray-600">9-10%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Baking Powder</td><td class="py-2 text-gray-600">1.5% by weight</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Salt Content</td><td class="py-2 text-gray-600">0.5% by weight</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">Max 14%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-pink-600 mr-2"></i>1kg, 2kg retail bags</li>
+                                <li><i class="fas fa-box text-pink-600 mr-2"></i>Custom packaging available</li>
+                            </ul>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Trade Terms -->
+                <div class="bg-gradient-to-r from-amber-700 to-amber-600 p-8 rounded-lg shadow-xl mb-12 text-white">
+                    <h3 class="text-3xl font-bold mb-6 text-center">Flour Trade Terms & Logistics</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-ship mr-2 text-yellow-300"></i>FOB</h4>
+                            <p class="text-gray-100 text-sm">Loading at Karachi port for export. Buyer arranges freight.</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-anchor mr-2 text-yellow-300"></i>CIF/CFR</h4>
+                            <p class="text-gray-100 text-sm">Complete delivery to destination port with documentation.</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-truck mr-2 text-yellow-300"></i>DAP</h4>
+                            <p class="text-gray-100 text-sm">Delivered to buyer's warehouse (Afghanistan land routes).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation -->
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-amber-600 mb-12">
+                    <h3 class="text-2xl font-bold text-amber-900 mb-4"><i class="fas fa-file-contract mr-2"></i>Export Documentation & Inspection</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2">Required Documents:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-check text-amber-600 mr-2"></i>Certificate of Analysis (protein, ash, moisture)</li>
+                                <li><i class="fas fa-check text-amber-600 mr-2"></i>Health Certificate from Food Authority</li>
+                                <li><i class="fas fa-check text-amber-600 mr-2"></i>Fumigation Certificate</li>
+                                <li><i class="fas fa-check text-amber-600 mr-2"></i>Halal Certificate</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2">Quality Testing:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-flask text-amber-600 mr-2"></i>Protein analysis (Kjeldahl method)</li>
+                                <li><i class="fas fa-flask text-amber-600 mr-2"></i>Gluten quality and quantity</li>
+                                <li><i class="fas fa-flask text-amber-600 mr-2"></i>Falling number test</li>
+                                <li><i class="fas fa-flask text-amber-600 mr-2"></i>Microbiological screening</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Oil Tab Content -->
+            <div id="oil" class="tab-content">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-emerald-900 mb-6">Edible Oils - Import & Export Solutions</h2>
+                    <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-4">
+                        Ibraheem Industries is a trusted <strong>importer and exporter</strong> of refined edible oils meeting international 
+                        food safety standards. We source palm oil from Malaysia and Indonesia, sunflower and soybean oil from Ukraine and Russia, 
+                        and export refined oils to Afghanistan, Africa, and regional markets.
+                    </p>
+                    <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                        Our oil trading division ensures rigorous quality control through laboratory analysis of FFA (Free Fatty Acids), 
+                        peroxide value, iodine value, and saponification value. All shipments include quality certificates and comply with 
+                        destination country regulations.
+                    </p>
+                </div>
+
+                <!-- Import/Export Overview -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-blue-50 p-8 rounded-lg border-2 border-blue-200">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-4"><i class="fas fa-download mr-2"></i>Import Sources</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Malaysia:</strong> RBD Palm Olein, Palm Oil</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Indonesia:</strong> Crude Palm Oil (CPO), RBD Palm Oil</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Ukraine:</strong> Refined Sunflower Oil, Crude Sunflower Oil</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Russia:</strong> Sunflower Oil, Soybean Oil</li>
+                            <li><i class="fas fa-globe text-blue-600 mr-2"></i><strong>Argentina:</strong> Soybean Oil, Corn Oil</li>
+                        </ul>
+                    </div>
+                    <div class="bg-amber-50 p-8 rounded-lg border-2 border-amber-200">
+                        <h3 class="text-2xl font-bold text-amber-900 mb-4"><i class="fas fa-upload mr-2"></i>Export Destinations</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>Afghanistan:</strong> Refined vegetable oils</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>East Africa:</strong> Kenya, Tanzania, Uganda</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>West Africa:</strong> Nigeria, Ghana</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>Middle East:</strong> UAE, Yemen, Oman</li>
+                            <li><i class="fas fa-map-marker-alt text-amber-600 mr-2"></i><strong>Central Asia:</strong> Tajikistan, Uzbekistan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Oil Product Varieties -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+                    
+                    <!-- Sunflower Oil -->
+                    <div class="bg-gradient-to-br from-white to-yellow-50 p-8 rounded-lg shadow-lg border border-yellow-200">
+                        <img src="./images/oil-sunflower-refined.jpg" 
+                             alt="Sunflower Oil" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Refined Sunflower Oil</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Light, neutral-tasting oil rich in Vitamin E and low in saturated fats. Perfect for deep frying, cooking, 
+                            salad dressings, and food manufacturing. High smoke point (232°C) makes it ideal for commercial kitchens.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Free Fatty Acids (FFA)</td><td class="py-2 text-gray-600">Max 0.1%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Peroxide Value</td><td class="py-2 text-gray-600">Max 1.0 meq/kg</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture & Impurities</td><td class="py-2 text-gray-600">Max 0.05%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Iodine Value</td><td class="py-2 text-gray-600">110-143 g I₂/100g</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Saponification Value</td><td class="py-2 text-gray-600">188-194 mg KOH/g</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Color (Lovibond)</td><td class="py-2 text-gray-600">Max 2.0 Red</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Smoke Point</td><td class="py-2 text-gray-600">232°C (450°F)</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Appearance</td><td class="py-2 text-gray-600">Clear, brilliant, free from sediment</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Quality Certifications</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">ISO 22000</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">HACCP</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Halal</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Kosher</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Non-GMO</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging Options</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-bottle text-yellow-600 mr-2"></i>1L, 2L, 5L PET bottles for retail</li>
+                                <li><i class="fas fa-bottle text-yellow-600 mr-2"></i>18L tin/jerry cans for food service</li>
+                                <li><i class="fas fa-box text-yellow-600 mr-2"></i>Flexitanks (20-24 MT per 20ft container)</li>
+                                <li><i class="fas fa-box text-yellow-600 mr-2"></i>Bulk tankers for industrial buyers</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Storage & Shelf Life</h4>
+                            <p class="text-gray-700 text-sm">Store in cool place away from direct sunlight. Shelf life: 12-18 months in sealed packaging. Ideal storage temperature: 10-25°C.</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Minimum Order</p>
+                                <p class="text-gray-600">1 Flexitank (20 MT)</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Lead Time</p>
+                                <p class="text-gray-600">20-30 days</p>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Palm Oil -->
+                    <div class="bg-gradient-to-br from-white to-orange-50 p-8 rounded-lg shadow-lg border border-orange-200">
+                        <img src="./images/oil-palm-rbd.jpg" 
+                             alt="Palm Oil RBD" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">RBD Palm Oil (Refined, Bleached, Deodorized)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Versatile cooking oil widely used in food processing, confectionery, baking, and frying applications. 
+                            Excellent oxidative stability and long shelf life. Semi-solid at room temperature, ideal for industrial use.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Free Fatty Acids (FFA)</td><td class="py-2 text-gray-600">Max 0.1%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Peroxide Value</td><td class="py-2 text-gray-600">Max 2.0 meq/kg</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture & Impurities</td><td class="py-2 text-gray-600">Max 0.1%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Iodine Value</td><td class="py-2 text-gray-600">50-55 g I₂/100g</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Saponification Value</td><td class="py-2 text-gray-600">196-206 mg KOH/g</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Melting Point</td><td class="py-2 text-gray-600">33-39°C</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Color (Lovibond)</td><td class="py-2 text-gray-600">Max 3.0 Red</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Quality Certifications</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">RSPO Certified</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Halal</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">ISO 22000</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging Options</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-orange-600 mr-2"></i>17kg, 18kg tins</li>
+                                <li><i class="fas fa-box text-orange-600 mr-2"></i>Flexitanks (20-24 MT)</li>
+                                <li><i class="fas fa-box text-orange-600 mr-2"></i>Bulk containers</li>
+                            </ul>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Minimum Order</p>
+                                <p class="text-gray-600">20 MT</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Lead Time</p>
+                                <p class="text-gray-600">25-35 days</p>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Soybean Oil -->
+                    <div class="bg-gradient-to-br from-white to-green-50 p-8 rounded-lg shadow-lg border border-green-200">
+                        <img src="./images/oil-soybean-refined.jpg" 
+                             alt="Soybean Oil" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Refined Soybean Oil</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Versatile, affordable vegetable oil with high polyunsaturated fat content. Widely used in food manufacturing, 
+                            mayonnaise, salad dressings, and cooking. Excellent source of omega-3 and omega-6 fatty acids.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Free Fatty Acids (FFA)</td><td class="py-2 text-gray-600">Max 0.1%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Peroxide Value</td><td class="py-2 text-gray-600">Max 2.0 meq/kg</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture & Impurities</td><td class="py-2 text-gray-600">Max 0.05%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Iodine Value</td><td class="py-2 text-gray-600">120-143 g I₂/100g</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Saponification Value</td><td class="py-2 text-gray-600">189-195 mg KOH/g</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-green-600 mr-2"></i>Flexitanks and bulk containers</li>
+                                <li><i class="fas fa-box text-green-600 mr-2"></i>Retail packaging: 1L, 5L bottles</li>
+                            </ul>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Canola Oil -->
+                    <div class="bg-gradient-to-br from-white to-blue-50 p-8 rounded-lg shadow-lg border border-blue-200">
+                        <img src="./images/oil-canola-cooking.jpg" 
+                             alt="Canola Oil" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Refined Canola Oil</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Heart-healthy oil with the lowest saturated fat content among cooking oils. High smoke point (242°C) makes it 
+                            perfect for deep frying. Neutral taste ideal for baking and cooking. Rich in omega-3 fatty acids.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Free Fatty Acids (FFA)</td><td class="py-2 text-gray-600">Max 0.1%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Peroxide Value</td><td class="py-2 text-gray-600">Max 1.0 meq/kg</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture & Impurities</td><td class="py-2 text-gray-600">Max 0.05%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Iodine Value</td><td class="py-2 text-gray-600">110-126 g I₂/100g</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Smoke Point</td><td class="py-2 text-gray-600">242°C (468°F)</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-blue-600 mr-2"></i>1L, 5L bottles | Flexitanks | Bulk</li>
+                            </ul>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Corn Oil -->
+                    <div class="bg-gradient-to-br from-white to-yellow-50 p-8 rounded-lg shadow-lg border border-yellow-200">
+                        <img src="./images/oil-corn-refined.jpg" 
+                             alt="Corn Oil" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Refined Corn Oil</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Light, mild-flavored oil extracted from corn germ. High smoke point suitable for frying. 
+                            Rich in phytosterols which may help reduce cholesterol. Popular for commercial food manufacturing.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Free Fatty Acids (FFA)</td><td class="py-2 text-gray-600">Max 0.1%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Peroxide Value</td><td class="py-2 text-gray-600">Max 1.5 meq/kg</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Iodine Value</td><td class="py-2 text-gray-600">103-135 g I₂/100g</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Smoke Point</td><td class="py-2 text-gray-600">230°C (446°F)</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Trade Terms -->
+                <div class="bg-gradient-to-r from-yellow-700 to-yellow-600 p-8 rounded-lg shadow-xl mb-12 text-white">
+                    <h3 class="text-3xl font-bold mb-6 text-center">Edible Oil Trade Terms</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-ship mr-2 text-yellow-300"></i>FOB Pricing</h4>
+                            <p class="text-gray-100 text-sm">Loading at origin port (Malaysia/Indonesia/Ukraine). Buyer arranges shipping.</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-anchor mr-2 text-yellow-300"></i>CIF Pricing</h4>
+                            <p class="text-gray-100 text-sm">Complete delivery with freight and insurance to Karachi or destination port.</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-warehouse mr-2 text-yellow-300"></i>Bulk/Flexitank</h4>
+                            <p class="text-gray-100 text-sm">Cost-effective flexitank shipments (20-24 MT) or ISO tank containers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality & Documentation -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-yellow-600">
+                        <h3 class="text-2xl font-bold text-yellow-900 mb-4"><i class="fas fa-clipboard-check mr-2"></i>Quality Testing Protocol</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-check text-yellow-600 mr-2"></i>FFA (Free Fatty Acid) Analysis</li>
+                            <li><i class="fas fa-check text-yellow-600 mr-2"></i>Peroxide Value Testing</li>
+                            <li><i class="fas fa-check text-yellow-600 mr-2"></i>Iodine Value Measurement</li>
+                            <li><i class="fas fa-check text-yellow-600 mr-2"></i>Saponification Value</li>
+                            <li><i class="fas fa-check text-yellow-600 mr-2"></i>Color Analysis (Lovibond Method)</li>
+                            <li><i class="fas fa-check text-yellow-600 mr-2"></i>Moisture & Impurities Testing</li>
+                            <li><i class="fas fa-check text-yellow-600 mr-2"></i>Soap Content Testing</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-orange-600">
+                        <h3 class="text-2xl font-bold text-orange-900 mb-4"><i class="fas fa-file-contract mr-2"></i>Export Documentation</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-certificate text-orange-600 mr-2"></i>Certificate of Analysis from accredited lab</li>
+                            <li><i class="fas fa-certificate text-orange-600 mr-2"></i>Health Certificate</li>
+                            <li><i class="fas fa-certificate text-orange-600 mr-2"></i>Halal Certificate (if applicable)</li>
+                            <li><i class="fas fa-certificate text-orange-600 mr-2"></i>RSPO Certificate (for palm oil)</li>
+                            <li><i class="fas fa-certificate text-orange-600 mr-2"></i>SGS/Intertek Inspection Report</li>
+                            <li><i class="fas fa-certificate text-orange-600 mr-2"></i>Certificate of Origin</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Rice Tab Content -->
+            <div id="rice" class="tab-content">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-emerald-900 mb-6">Premium Rice - Export Solutions</h2>
+                    <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-4">
+                        Pakistan is globally renowned for producing the world's finest <strong>Basmati rice</strong>. Ibraheem Industries specializes in 
+                        <strong>exporting premium rice varieties</strong> from the fertile fields of Punjab and Sindh to markets across the Middle East, 
+                        Africa, Europe, and Central Asia. Our rice meets the strictest international quality standards.
+                    </p>
+                    <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                        We handle complete export logistics including milling, aging, quality grading, fumigation, container stuffing, 
+                        and documentation. Every shipment is backed by laboratory certificates confirming grain length, purity, moisture content, 
+                        and compliance with destination country regulations.
+                    </p>
+                </div>
+
+                <!-- Export Destinations -->
+                <div class="bg-amber-50 p-8 rounded-lg border-2 border-amber-200 mb-12">
+                    <h3 class="text-2xl font-bold text-amber-900 mb-4 text-center"><i class="fas fa-globe mr-2"></i>Our Global Export Markets</h3>
+                    <div class="grid md:grid-cols-4 gap-6 text-center">
+                        <div>
+                            <h4 class="font-bold text-lg text-emerald-800 mb-2">Middle East</h4>
+                            <p class="text-gray-700 text-sm">UAE, Saudi Arabia, Kuwait, Oman, Qatar, Yemen</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-emerald-800 mb-2">Africa</h4>
+                            <p class="text-gray-700 text-sm">Kenya, Tanzania, Somalia, South Africa, Nigeria, Ghana</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-emerald-800 mb-2">Europe</h4>
+                            <p class="text-gray-700 text-sm">UK, Germany, France, Netherlands, Belgium</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-emerald-800 mb-2">Central Asia</h4>
+                            <p class="text-gray-700 text-sm">Afghanistan, Tajikistan, Uzbekistan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Product Varieties -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+                    
+                    <!-- Super Kernel Basmati -->
+                    <div class="bg-gradient-to-br from-white to-emerald-50 p-8 rounded-lg shadow-lg border border-emerald-200">
+                        <img src="./images/rice-super-kernel-basmati.jpg" 
+                             alt="Super Kernel Basmati Rice" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Super Kernel Basmati Rice</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            The flagship Pakistani Basmati variety known for exceptionally long grains (8mm+), supreme aroma, and extraordinary elongation. 
+                            Aged 1-2 years for enhanced flavor and texture. Premium choice for upscale restaurants, hotels, and retail markets.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Average Grain Length</td><td class="py-2 text-gray-600">8.0-8.5 mm (before cooking)</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Elongation Ratio</td><td class="py-2 text-gray-600">2.0-2.5 times after cooking</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">12-14% maximum</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Broken Grains</td><td class="py-2 text-gray-600">Max 1-5% (grade dependent)</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Purity</td><td class="py-2 text-gray-600">95% minimum</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Chalky Grains</td><td class="py-2 text-gray-600">Max 4%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Damaged Grains</td><td class="py-2 text-gray-600">Max 1%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Aging</td><td class="py-2 text-gray-600">1-2 years aged available</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Quality Certifications</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">ISO 22000</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">HACCP</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Halal</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Sortex Cleaned</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">Fumigation Certified</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging Options</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-emerald-600 mr-2"></i>5kg, 10kg, 20kg PP bags for retail</li>
+                                <li><i class="fas fa-box text-emerald-600 mr-2"></i>25kg, 40kg, 50kg bags for wholesale</li>
+                                <li><i class="fas fa-box text-emerald-600 mr-2"></i>Custom branding and private labeling</li>
+                                <li><i class="fas fa-box text-emerald-600 mr-2"></i>Container load: 25-27 MT per 20ft</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Storage & Shelf Life</h4>
+                            <p class="text-gray-700 text-sm">Store in cool, dry, pest-free warehouses. Shelf life: 24 months in sealed packaging. Ideal storage temperature: 15-25°C with humidity below 70%.</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Minimum Order</p>
+                                <p class="text-gray-600">20 MT (1 container)</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="font-semibold text-gray-700">Lead Time</p>
+                                <p class="text-gray-600">15-20 days</p>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- 1121 Basmati -->
+                    <div class="bg-gradient-to-br from-white to-emerald-50 p-8 rounded-lg shadow-lg border border-emerald-200">
+                        <img src="./images/rice-1121-basmati-sella.jpg" 
+                             alt="1121 Basmati Rice" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">1121 Basmati Rice (Sella/Steam/White)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Extra-long grain Basmati rice available in white, steam (sella), and golden varieties. The 1121 variety is famous for 
+                            its slender grains, excellent cooking characteristics, and competitive pricing. Highly popular in Middle Eastern and African markets.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Average Grain Length</td><td class="py-2 text-gray-600">8.2-8.4 mm</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Elongation Ratio</td><td class="py-2 text-gray-600">2.0-2.2 times</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">12-14% maximum</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Broken Grains</td><td class="py-2 text-gray-600">1-5% (grade dependent)</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Purity</td><td class="py-2 text-gray-600">95% minimum</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Available Types</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-check text-emerald-600 mr-2"></i><strong>White 1121:</strong> Polished white rice, natural processing</li>
+                                <li><i class="fas fa-check text-emerald-600 mr-2"></i><strong>Steam 1121 (Sella):</strong> Parboiled, harder grains, less stickiness</li>
+                                <li><i class="fas fa-check text-emerald-600 mr-2"></i><strong>Golden Sella:</strong> Parboiled with golden hue, popular in Africa</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-box text-emerald-600 mr-2"></i>5kg, 10kg, 25kg, 50kg PP bags</li>
+                                <li><i class="fas fa-box text-emerald-600 mr-2"></i>Private labeling available</li>
+                            </ul>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Irri-6 -->
+                    <div class="bg-gradient-to-br from-white to-gray-50 p-8 rounded-lg shadow-lg border border-gray-200">
+                        <img src="./images/rice-irri6-non-basmati.jpg" 
+                             alt="Irri-6 Rice" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">IRRI-6 Non-Basmati Rice</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Most popular non-Basmati variety for bulk exports. Medium-grain white rice ideal for everyday consumption, 
+                            institutional catering, food aid programs, and food processing industries. Economical pricing with consistent quality.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Average Grain Length</td><td class="py-2 text-gray-600">6.0-6.2 mm</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">13-14%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Broken Grains</td><td class="py-2 text-gray-600">5-25% (grade dependent)</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Whiteness</td><td class="py-2 text-gray-600">35-40% polished</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Sortex Quality</td><td class="py-2 text-gray-600">Available</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Grades Available</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-star text-amber-500 mr-2"></i><strong>5% Broken:</strong> Premium grade for retail</li>
+                                <li><i class="fas fa-star text-amber-500 mr-2"></i><strong>10% Broken:</strong> Standard export grade</li>
+                                <li><i class="fas fa-star text-amber-500 mr-2"></i><strong>25% Broken:</strong> Economy grade, bulk orders</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Packaging</h4>
+                            <p class="text-gray-700">25kg, 50kg PP bags | Bulk containers | Industrial packaging</p>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                    <!-- Parboiled Rice -->
+                    <div class="bg-gradient-to-br from-white to-yellow-50 p-8 rounded-lg shadow-lg border border-yellow-200">
+                        <img src="./images/rice-parboiled-golden.jpg" 
+                             alt="Parboiled Rice" 
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md">
+                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">Parboiled Rice (Sella)</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Steam-treated rice with enhanced nutritional value and shelf life. Grains remain separate after cooking with reduced 
+                            stickiness. Ideal for biryani, pilaf, and institutional cooking. Popular in African and Middle Eastern markets.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-4 border-b-2 border-emerald-300 pb-2">Technical Specifications</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <table class="w-full text-sm">
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr><td class="py-2 font-semibold text-gray-700">Processing</td><td class="py-2 text-gray-600">Steam-treated parboiled</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Color</td><td class="py-2 text-gray-600">Golden to light yellow</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Moisture Content</td><td class="py-2 text-gray-600">12-14%</td></tr>
+                                        <tr><td class="py-2 font-semibold text-gray-700">Broken Grains</td><td class="py-2 text-gray-600">5-10%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg text-emerald-800 mb-3">Benefits</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Enhanced nutritional value (vitamin retention)</li>
+                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Longer shelf life</li>
+                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Grains don't stick together</li>
+                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Easier to digest</li>
+                            </ul>
+                        </div>
+
+                        <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-md font-semibold transition w-full text-center">
+                            <i class="fas fa-envelope mr-2"></i>Request Quotation
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Trade Terms -->
+                <div class="bg-gradient-to-r from-emerald-900 to-emerald-800 p-8 rounded-lg shadow-xl mb-12 text-white">
+                    <h3 class="text-3xl font-bold mb-6 text-center">Rice Export Trade Terms</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-ship mr-2 text-amber-400"></i>FOB Karachi</h4>
+                            <p class="text-gray-200 text-sm">Loading at Karachi port. Most common for Middle East and African buyers. Competitive freight rates available.</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-anchor mr-2 text-amber-400"></i>CIF Terms</h4>
+                            <p class="text-gray-200 text-sm">Complete delivery to destination port including freight and insurance. Preferred by first-time buyers.</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3"><i class="fas fa-truck mr-2 text-amber-400"></i>CNF Terms</h4>
+                            <p class="text-gray-200 text-sm">Cost and Freight without insurance. Buyer arranges insurance separately for better control.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export Documentation -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-emerald-600">
+                        <h3 class="text-2xl font-bold text-emerald-900 mb-4"><i class="fas fa-file-contract mr-2"></i>Export Documentation</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Commercial Invoice & Packing List</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Bill of Lading (B/L)</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Certificate of Origin (Chamber of Commerce)</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Phytosanitary Certificate</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Fumigation Certificate</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Quality Analysis Certificate</li>
+                            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Halal Certificate (if required)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-amber-600">
+                        <h3 class="text-2xl font-bold text-amber-900 mb-4"><i class="fas fa-clipboard-check mr-2"></i>Quality Inspection</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-microscope text-amber-600 mr-2"></i><strong>Grain Length:</strong> Vernier caliper measurement</li>
+                            <li><i class="fas fa-vial text-amber-600 mr-2"></i><strong>Moisture Testing:</strong> Digital moisture meter</li>
+                            <li><i class="fas fa-balance-scale text-amber-600 mr-2"></i><strong>Broken % Analysis:</strong> Physical sorting and weighing</li>
+                            <li><i class="fas fa-eye text-amber-600 mr-2"></i><strong>Purity Check:</strong> Foreign matter, chalky grains</li>
+                            <li><i class="fas fa-certificate text-amber-600 mr-2"></i><strong>Third Party:</strong> SGS/Intertek inspection available</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-emerald-900 to-emerald-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Explore Import/Export Opportunities?</h2>
+            <p class="text-xl text-gray-200 mb-4 max-w-3xl mx-auto">
+                Whether you're looking to <strong>import</strong> quality commodities or <strong>export</strong> to international markets, 
+                Ibraheem Industries provides complete trade solutions with competitive pricing and reliable logistics.
+            </p>
+            <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                Contact us today for custom quotations, bulk pricing, trade terms negotiation, and comprehensive shipping solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-md text-lg font-semibold transition transform hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i>Request Custom Quote
+                </a>
+                <a href="tel:+922150537 86" class="inline-block bg-white hover:bg-gray-100 text-emerald-900 px-10 py-4 rounded-md text-lg font-semibold transition transform hover:scale-105">
+                    <i class="fas fa-phone mr-2"></i>Call Us Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        <i class="fas fa-seedling text-amber-500"></i> Ibraheem Industries
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Connecting global markets through quality agricultural trade since 2006. Your trusted partner for import and export solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-amber-500">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-amber-500">Products</a></li>
+                        <li><a href="quality.html" class="hover:text-amber-500">Quality Assurance</a></li>
+                        <li><a href="sustainability.html" class="hover:text-amber-500">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#sugar" class="hover:text-amber-500">Sugar Import/Export</a></li>
+                        <li><a href="products.html#flour" class="hover:text-amber-500">Flour Import/Export</a></li>
+                        <li><a href="products.html#oil" class="hover:text-amber-500">Edible Oils</a></li>
+                        <li><a href="products.html#rice" class="hover:text-amber-500">Premium Rice</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Plot No. 56-B, Landhi Industrial Zone, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone text-amber-500 mr-2"></i> Tel: +92-21-5053786</li>
+                        <li><i class="fas fa-fax text-amber-500 mr-2"></i> Fax: +92-21-5056745</li>
+                        <li><i class="fas fa-envelope text-amber-500 mr-2"></i> ibraheemindustries@atomicmail.io</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-500">© 2026 Ibraheem Industries. All rights reserved. | Exporting Excellence Since 2006</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

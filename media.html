@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & Insights - Ibraheem Industries</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .news-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-2xl font-bold text-emerald-800">
+                            <i class="fas fa-seedling text-amber-500"></i> 
+                            <span class="ml-2">Ibraheem Industries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">About Us</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Products</a>
+                    <a href="operations.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Operations</a>
+                    <a href="quality.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Quality</a>
+                    <a href="sustainability.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Sustainability</a>
+                    <a href="media.html" class="nav-link active text-emerald-800 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Media</a>
+                    <a href="contact.html" class="bg-amber-500 text-white hover:bg-amber-600 px-6 py-2 rounded-md text-sm font-semibold transition">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-amber-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">About Us</a>
+                <a href="products.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Products</a>
+                <a href="operations.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Operations</a>
+                <a href="quality.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Quality</a>
+                <a href="sustainability.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Sustainability</a>
+                <a href="media.html" class="block px-3 py-2 text-emerald-800 font-semibold">Media</a>
+                <a href="contact.html" class="block px-3 py-2 text-amber-600 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center mt-20 bg-cover bg-center" style="background-image: linear-gradient(rgba(6, 78, 59, 0.85), rgba(4, 47, 46, 0.85)), url('./images/hero-wheat-fields.jpg');">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Media & Industry Insights</h1>
+            <p class="text-xl text-gray-200">Latest News, Market Trends & Company Updates</p>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Latest News & Updates</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Stay informed about our company developments and the agricultural export industry
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- News Card 1 -->
+                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                    <img src="./images/container-loading-port.jpg" 
+                         alt="Basmati export growth" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-amber-600 text-sm font-semibold mb-2">Company News • March 15, 2026</div>
+                        <h3 class="text-xl font-bold text-emerald-900 mb-3">Ibraheem Industries Expands Basmati Exports to European Markets</h3>
+                        <p class="text-gray-600 mb-4">
+                            We're proud to announce new partnerships with major distributors in Germany and France, expanding our premium Basmati rice reach across the European Union.
+                        </p>
+                        <a href="#" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Card 2 -->
+                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                    <img src="./images/hero-wheat-fields.jpg" 
+                         alt="Wheat harvest season" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-emerald-600 text-sm font-semibold mb-2">Market Insights • March 8, 2026</div>
+                        <h3 class="text-xl font-bold text-emerald-900 mb-3">Pakistan Wheat Harvest 2026: Record Yield Expected in Punjab</h3>
+                        <p class="text-gray-600 mb-4">
+                            Favorable weather conditions and improved irrigation have positioned Punjab for a bumper wheat crop this season, with yields projected 12% higher than 2025.
+                        </p>
+                        <a href="#" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Card 3 -->
+                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                    <img src="./images/quality-testing-lab.jpg" 
+                         alt="ISO certification" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-blue-600 text-sm font-semibold mb-2">Company News • February 28, 2026</div>
+                        <h3 class="text-xl font-bold text-emerald-900 mb-3">ISO 9001:2015 Recertification Successfully Completed</h3>
+                        <p class="text-gray-600 mb-4">
+                            Ibraheem Industries has successfully completed its ISO 9001:2015 recertification audit with zero non-conformities, reaffirming our commitment to quality management.
+                        </p>
+                        <a href="#" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Card 4 -->
+                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                    <img src="./images/rice-1121-basmati-sella.jpg" 
+                         alt="Rice market trends" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-purple-600 text-sm font-semibold mb-2">Market Insights • February 20, 2026</div>
+                        <h3 class="text-xl font-bold text-emerald-900 mb-3">Global Basmati Rice Prices Stabilize After Q4 2025 Volatility</h3>
+                        <p class="text-gray-600 mb-4">
+                            International Basmati prices have normalized following supply chain disruptions last quarter. Pakistani exporters are well-positioned for strong Q1 performance.
+                        </p>
+                        <a href="#" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Card 5 -->
+                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                    <img src="./images/pakistani-farmers-punjab.jpg" 
+                         alt="Farmer training program" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-green-600 text-sm font-semibold mb-2">Sustainability • February 12, 2026</div>
+                        <h3 class="text-xl font-bold text-emerald-900 mb-3">500+ Farmers Complete Sustainable Agriculture Training</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our latest sustainable farming workshop series concluded with over 500 farmers trained in water conservation, organic pest management, and soil health practices.
+                        </p>
+                        <a href="#" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Card 6 -->
+                <div class="news-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                    <img src="./images/oil-sunflower-refined.jpg" 
+                         alt="Edible oil market" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-yellow-600 text-sm font-semibold mb-2">Market Insights • January 30, 2026</div>
+                        <h3 class="text-xl font-bold text-emerald-900 mb-3">Edible Oil Demand Surges in Middle East B2B Sector</h3>
+                        <p class="text-gray-600 mb-4">
+                            Restaurant and food manufacturing sectors in UAE and Saudi Arabia show increased demand for refined sunflower and canola oil, creating opportunities for Pakistani exporters.
+                        </p>
+                        <a href="#" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Insights Section -->
+    <section class="py-20 bg-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Commodity Market Trends</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Insights into Pakistani agricultural commodity markets and global trade dynamics
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-3xl text-emerald-700 mr-4"></i>
+                        <h3 class="text-2xl font-bold text-emerald-900">Rice Export Outlook 2026</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Pakistan's rice exports are projected to reach 5.5 million metric tons in 2026, with Basmati commanding premium prices in Gulf markets. India's export restrictions have created additional opportunities for Pakistani exporters to capture market share in traditional Indian strongholds.
+                    </p>
+                    <div class="border-t pt-4">
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-amber-600">$2.8B</div>
+                                <div class="text-sm text-gray-600">Export Value (Est. 2026)</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-amber-600">+8%</div>
+                                <div class="text-sm text-gray-600">YoY Growth</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-bar text-3xl text-amber-600 mr-4"></i>
+                        <h3 class="text-2xl font-bold text-emerald-900">Wheat Market Dynamics</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Global wheat prices have stabilized after 2025's volatility. Pakistan's domestic wheat production is strong, with Punjab and Sindh harvests meeting local demand. Export potential exists for premium milling wheat to Afghanistan, Central Asia, and select African markets.
+                    </p>
+                    <div class="border-t pt-4">
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-amber-600">28M MT</div>
+                                <div class="text-sm text-gray-600">Production (2025-26)</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-amber-600">$280/MT</div>
+                                <div class="text-sm text-gray-600">Avg. Export Price</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-emerald-900 to-emerald-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Stay Updated on Market Trends</h2>
+            <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                Subscribe to our newsletter for monthly commodity insights and company news
+            </p>
+            <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-md text-lg font-semibold transition transform hover:scale-105">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        <i class="fas fa-seedling text-amber-500"></i> Ibraheem Industries
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Exporting Pakistan's premium harvest to the world with quality, integrity, and excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-amber-500">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-amber-500">Products</a></li>
+                        <li><a href="quality.html" class="hover:text-amber-500">Quality Assurance</a></li>
+                        <li><a href="sustainability.html" class="hover:text-amber-500">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#sugar" class="hover:text-amber-500">Sugar Import/Export</a></li>
+                        <li><a href="products.html#flour" class="hover:text-amber-500">Flour Import/Export</a></li>
+                        <li><a href="products.html#oil" class="hover:text-amber-500">Edible Oils</a></li>
+                        <li><a href="products.html#rice" class="hover:text-amber-500">Premium Rice</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Plot No. 56-B, Landhi Industrial Zone, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone text-amber-500 mr-2"></i> Tel: +92-21-5053786</li>
+                        <li><i class="fas fa-fax text-amber-500 mr-2"></i> Fax: +92-21-5056745</li>
+                        <li><i class="fas fa-envelope text-amber-500 mr-2"></i> ibraheemindustries@atomicmail.io</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-500">© 2026 Ibraheem Industries. All rights reserved. | Exporting Excellence Since 2006</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

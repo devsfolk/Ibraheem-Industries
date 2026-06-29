@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibraheem Industries - Premium Food Exporters from Pakistan</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(6, 78, 59, 0.85) 0%, rgba(4, 47, 46, 0.9) 100%);
+        }
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .product-card img {
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .stat-counter {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #f59e0b;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-2xl font-bold text-emerald-800">
+                            <i class="fas fa-seedling text-amber-500"></i> 
+                            <span class="ml-2">Ibraheem Industries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link active text-emerald-800 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">About Us</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Products</a>
+                    <a href="operations.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Operations</a>
+                    <a href="quality.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Quality</a>
+                    <a href="sustainability.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Sustainability</a>
+                    <a href="media.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Media</a>
+                    <a href="contact.html" class="bg-amber-500 text-white hover:bg-amber-600 px-6 py-2 rounded-md text-sm font-semibold transition">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-amber-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-emerald-800 font-semibold">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">About Us</a>
+                <a href="products.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Products</a>
+                <a href="operations.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Operations</a>
+                <a href="quality.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Quality</a>
+                <a href="sustainability.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Sustainability</a>
+                <a href="media.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Media</a>
+                <a href="contact.html" class="block px-3 py-2 text-amber-600 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center mt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="./images/hero-wheat-fields.jpg" 
+                 alt="Golden wheat fields in Punjab, Pakistan" 
+                 class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Connecting Global Markets Through <span class="text-amber-400">Premium Trade</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-4 font-light">
+                Leading importer and exporter of high-quality Sugar, Flour, Edible Oils, and Rice
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 font-light">
+                Trusted supplier and sourcing partner for international B2B markets since 2006
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-md text-lg font-semibold transition transform hover:scale-105">
+                    Get a Quote
+                </a>
+                <a href="products.html" class="bg-white hover:bg-gray-100 text-emerald-800 px-8 py-4 rounded-md text-lg font-semibold transition transform hover:scale-105">
+                    View Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-emerald-900 mb-6">Who We Are</h2>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Ibraheem Industries is a leading import-export company based in Karachi, Pakistan, specializing in premium agricultural commodities. Established in 2006 and headquartered at Plot No. 56-B, Landhi Industrial Zone, we have built a reputation for excellence in international trade of Sugar, Flour, Edible Oils, and Rice.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        With over two decades of experience, we serve as a vital bridge connecting Pakistan's agricultural wealth with global markets while also importing quality products to meet domestic demand. Our dual expertise in both import and export operations ensures comprehensive supply chain solutions for our international partners.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Sourcing from the fertile plains of Punjab and Sindh, we export exceptional quality commodities to discerning buyers across the Middle East, Africa, Europe, and Asia. Simultaneously, our import operations bring world-class products to Pakistani markets, supporting local industries and consumers.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We combine traditional trading expertise with modern supply chain management, ensuring every shipment—whether inbound or outbound—meets international food safety standards and exceeds client expectations. Our commitment to quality, transparency, and timely delivery has made us a trusted partner in global agricultural trade.
+                    </p>
+                    <a href="about.html" class="inline-block mt-6 text-amber-600 font-semibold hover:text-amber-700">
+                        Learn More About Us <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div>
+                    <img src="./images/company-building-karachi.jpg" 
+                         alt="Ibraheem Industries office in Karachi" 
+                         class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-16 bg-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="stat-counter" data-target="15000">0</div>
+                    <p class="text-white text-lg mt-2">Tons Exported Annually</p>
+                </div>
+                <div>
+                    <div class="stat-counter" data-target="35">0</div>
+                    <p class="text-white text-lg mt-2">Countries Served</p>
+                </div>
+                <div>
+                    <div class="stat-counter" data-target="20">0</div>
+                    <p class="text-white text-lg mt-2">Years of Excellence</p>
+                </div>
+                <div>
+                    <div class="stat-counter" data-target="500">0</div>
+                    <p class="text-white text-lg mt-2">Satisfied Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Our Premium Products</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Handpicked from Pakistan's most fertile regions, processed with care, and delivered with excellence
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Sugar Card -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="overflow-hidden h-64">
+                        <img src="./images/sugar-white-refined.jpg" 
+                             alt="Premium Refined Sugar" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-emerald-900 mb-3">Premium Sugar</h3>
+                        <p class="text-gray-600 mb-4">
+                            Crystal white refined sugar (ICUMSA 45) and brown sugar for international trade and domestic supply.
+                        </p>
+                        <a href="products.html#sugar" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Explore Sugar <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Flour Card -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="overflow-hidden h-64">
+                        <img src="./images/flour-wheat-bag.jpg" 
+                             alt="Premium Wheat Flour" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-emerald-900 mb-3">Premium Flour</h3>
+                        <p class="text-gray-600 mb-4">
+                            High-quality refined wheat flour and chakki atta for baking, chapati, and industrial applications.
+                        </p>
+                        <a href="products.html#flour" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Explore Flour <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Oil Card -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="overflow-hidden h-64">
+                        <img src="./images/edible-oil-bottles.jpg" 
+                             alt="Premium Edible Oils" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-emerald-900 mb-3">Edible Oils</h3>
+                        <p class="text-gray-600 mb-4">
+                            Pure sunflower, canola, palm, and soybean oil processed to international quality standards.
+                        </p>
+                        <a href="products.html#oil" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Explore Oils <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rice Card -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="overflow-hidden h-64">
+                        <img src="./images/basmati-rice-premium.jpg" 
+                             alt="Premium Basmati Rice" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-emerald-900 mb-3">Premium Rice</h3>
+                        <p class="text-gray-600 mb-4">
+                            World-renowned Basmati and premium non-Basmati varieties with superior aroma and quality.
+                        </p>
+                        <a href="products.html#rice" class="text-amber-600 font-semibold hover:text-amber-700">
+                            Explore Rice <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Reach Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Global Reach</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Connecting Pakistan's agricultural excellence to markets across continents
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-8 bg-gray-50 rounded-lg">
+                    <i class="fas fa-globe-asia text-5xl text-amber-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Middle East & Asia</h3>
+                    <p class="text-gray-600">
+                        Major supplier to UAE, Saudi Arabia, Kuwait, Bangladesh, Malaysia, and Indonesia
+                    </p>
+                </div>
+                <div class="text-center p-8 bg-gray-50 rounded-lg">
+                    <i class="fas fa-globe-africa text-5xl text-amber-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Africa</h3>
+                    <p class="text-gray-600">
+                        Trusted partner for Kenya, Tanzania, South Africa, Nigeria, and East African markets
+                    </p>
+                </div>
+                <div class="text-center p-8 bg-gray-50 rounded-lg">
+                    <i class="fas fa-globe-europe text-5xl text-amber-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Europe</h3>
+                    <p class="text-gray-600">
+                        Growing presence in UK, Germany, France, and other European Union countries
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-100 rounded-lg p-8">
+                <img src="./images/karachi-port-shipping.jpg" 
+                     alt="Karachi Port shipping and logistics" 
+                     class="w-full rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Why Choose Ibraheem Industries</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Your trusted partner for premium Pakistani agricultural exports
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-certificate text-3xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">International Certifications</h3>
+                    <p class="text-gray-600">
+                        ISO 9001:2015, HACCP, Halal, and FDA compliant. All our products meet stringent international food safety standards.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-3xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Quality Assurance</h3>
+                    <p class="text-gray-600">
+                        Rigorous quality control at every stage—from farm to port. Laboratory-tested for purity, moisture content, and contamination.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shipping-fast text-3xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Timely Delivery</h3>
+                    <p class="text-gray-600">
+                        Strategic partnerships with global shipping lines ensure your cargo arrives on schedule, every time.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-3xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Trusted Relationships</h3>
+                    <p class="text-gray-600">
+                        Long-term partnerships built on transparency, integrity, and consistent quality. We treat your business as our own.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-dollar-sign text-3xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Competitive Pricing</h3>
+                    <p class="text-gray-600">
+                        Direct sourcing from farmers and bulk processing efficiencies allow us to offer the best value without compromising quality.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-3xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Sustainable Sourcing</h3>
+                    <p class="text-gray-600">
+                        Supporting local farmers with fair practices and promoting eco-friendly agricultural methods for a better tomorrow.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-emerald-900 to-emerald-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Partner With Us?</h2>
+            <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                Get in touch today to discuss your requirements. Our team is ready to provide customized solutions for your business needs.
+            </p>
+            <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-md text-lg font-semibold transition transform hover:scale-105">
+                Request a Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        <i class="fas fa-seedling text-amber-500"></i> Ibraheem Industries
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Exporting Pakistan's premium harvest to the world with quality, integrity, and excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-amber-500">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-amber-500">Products</a></li>
+                        <li><a href="quality.html" class="hover:text-amber-500">Quality Assurance</a></li>
+                        <li><a href="sustainability.html" class="hover:text-amber-500">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#sugar" class="hover:text-amber-500">Premium Sugar</a></li>
+                        <li><a href="products.html#flour" class="hover:text-amber-500">Wheat Flour</a></li>
+                        <li><a href="products.html#oil" class="hover:text-amber-500">Edible Oils</a></li>
+                        <li><a href="products.html#rice" class="hover:text-amber-500">Premium Rice</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Plot No. 56-B, Landhi Industrial Zone, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone text-amber-500 mr-2"></i> Tel: +92-21-5053786</li>
+                        <li><i class="fas fa-fax text-amber-500 mr-2"></i> Fax: +92-21-5056745</li>
+                        <li><i class="fas fa-envelope text-amber-500 mr-2"></i> ibraheemindustries@atomicmail.io</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-500">© 2026 Ibraheem Industries. All rights reserved. | Exporting Excellence Since 2006</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

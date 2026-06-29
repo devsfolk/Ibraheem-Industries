@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations - Ibraheem Industries</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="text-2xl font-bold text-emerald-800">
+                            <i class="fas fa-seedling text-amber-500"></i> 
+                            <span class="ml-2">Ibraheem Industries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">About Us</a>
+                    <a href="products.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Products</a>
+                    <a href="operations.html" class="nav-link active text-emerald-800 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Operations</a>
+                    <a href="quality.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Quality</a>
+                    <a href="sustainability.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Sustainability</a>
+                    <a href="media.html" class="nav-link text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-semibold">Media</a>
+                    <a href="contact.html" class="bg-amber-500 text-white hover:bg-amber-600 px-6 py-2 rounded-md text-sm font-semibold transition">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-amber-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">About Us</a>
+                <a href="products.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Products</a>
+                <a href="operations.html" class="block px-3 py-2 text-emerald-800 font-semibold">Operations</a>
+                <a href="quality.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Quality</a>
+                <a href="sustainability.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Sustainability</a>
+                <a href="media.html" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Media</a>
+                <a href="contact.html" class="block px-3 py-2 text-amber-600 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center mt-20 bg-cover bg-center" style="background-image: linear-gradient(rgba(6, 78, 59, 0.85), rgba(4, 47, 46, 0.85)), url('./images/hero-wheat-fields.jpg');">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Import & Export Operations</h1>
+            <p class="text-xl text-gray-200">Seamless Supply Chain from Global Sources to Pakistani Markets & Worldwide Export</p>
+        </div>
+    </section>
+
+    <!-- Supply Chain Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Our Supply Chain Process</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From global suppliers to local markets and from Pakistani farms to international ports, we manage every step with precision, transparency, and efficiency
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-amber-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tractor text-4xl text-amber-600"></i>
+                    </div>
+                    <div class="bg-amber-500 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Sourcing</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Direct procurement from trusted farmers in Punjab and Sindh. We maintain long-term relationships ensuring consistent quality and supply.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-emerald-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-microscope text-4xl text-emerald-600"></i>
+                    </div>
+                    <div class="bg-emerald-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Quality Control</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Rigorous laboratory testing for moisture, purity, contamination, and compliance with international food safety standards.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-blue-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-box text-4xl text-blue-600"></i>
+                    </div>
+                    <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Processing & Packaging</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        State-of-the-art cleaning, sorting, and packaging facilities ensuring product integrity and freshness.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-purple-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-ship text-4xl text-purple-600"></i>
+                    </div>
+                    <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Global Shipping</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Strategic partnerships with international shipping lines for reliable, timely delivery to 35+ countries worldwide.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sourcing Regions -->
+    <section class="py-20 bg-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Where We Source</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Pakistan's most fertile agricultural regions supply our premium products
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-10 rounded-lg shadow-lg">
+                    <img src="./images/industrial-processing-facility.jpg" 
+                         alt="Punjab wheat fields" 
+                         class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-3xl font-bold text-emerald-900 mb-4">
+                        <i class="fas fa-map-marker-alt text-amber-500 mr-2"></i>Punjab Province
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        The breadbasket of Pakistan, Punjab's irrigated plains produce 80% of the country's wheat and a significant portion of Basmati rice. We work with farmer cooperatives in:
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i><strong>Faisalabad</strong> - High-protein milling wheat</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i><strong>Lahore & Sheikhupura</strong> - Premium Basmati rice</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i><strong>Multan</strong> - Wheat and cotton seed oil</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i><strong>Gujranwala</strong> - Aromatic 1121 Basmati</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-lg shadow-lg">
+                    <img src="./images/warehouse-karachi-storage.jpg" 
+                         alt="Sindh rice paddies" 
+                         class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-3xl font-bold text-emerald-900 mb-4">
+                        <i class="fas fa-map-marker-alt text-amber-500 mr-2"></i>Sindh Province
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Sindh's fertile Indus River delta creates ideal conditions for rice cultivation and sugarcane. Our sourcing network includes:
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i><strong>Larkana & Shikarpur</strong> - Irri-6 and Irri-9 rice</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i><strong>Thatta & Badin</strong> - Non-Basmati export varieties</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i><strong>Sanghar</strong> - Sugar mills and refined sugar</li>
+                        <li><i class="fas fa-check text-amber-500 mr-2"></i><strong>Nawabshah</strong> - Rice processing hubs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processing Facilities -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">State-of-the-Art Processing</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Modern facilities equipped with advanced technology for optimal quality
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-gradient-to-br from-emerald-50 to-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-emerald-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-filter text-3xl text-emerald-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Cleaning & Sorting</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Multi-stage cleaning with destoning, de-husking, and color sorting machines. Removes impurities and ensures uniform product quality.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-emerald-50 to-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-emerald-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-vial text-3xl text-emerald-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Laboratory Testing</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        In-house labs test for moisture content, aflatoxin, heavy metals, pesticide residues, and microbiological contamination per international standards.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-emerald-50 to-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="bg-emerald-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-box-open text-3xl text-emerald-700"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Premium Packaging</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Food-grade packaging materials, moisture barriers, and nitrogen flushing for extended shelf life. Custom branding and labeling available.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-100 rounded-lg p-8">
+                <img src="./images/quality-testing-lab.jpg" 
+                     alt="Modern processing facility" 
+                     class="w-full rounded-lg shadow-lg mb-6">
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-amber-600 mb-2">5,000</div>
+                        <p class="text-gray-700">MT Monthly Capacity</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-amber-600 mb-2">15</div>
+                        <p class="text-gray-700">Processing Lines</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-amber-600 mb-2">24/7</div>
+                        <p class="text-gray-700">Operations</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-amber-600 mb-2">100%</div>
+                        <p class="text-gray-700">Quality Inspected</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistics & Shipping -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Global Import & Export Logistics</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Strategic shipping partnerships ensuring timely delivery of imported commodities to Pakistan and exports worldwide
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <img src="./images/container-loading-port.jpg" 
+                         alt="Cargo shipping containers" 
+                         class="rounded-lg shadow-2xl">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-4">Export Capabilities</h3>
+                    <ul class="space-y-4 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-anchor text-amber-500 text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <strong class="block text-emerald-800">Karachi Port Access</strong>
+                                Direct access to Pakistan's largest seaport with dedicated warehousing and customs clearance facilities.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-truck text-amber-500 text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <strong class="block text-emerald-800">Containerized Shipping</strong>
+                                Full Container Load (FCL) and Less than Container Load (LCL) options. Temperature-controlled containers for sensitive products.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-contract text-amber-500 text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <strong class="block text-emerald-800">Documentation & Compliance</strong>
+                                Complete export/import documentation: Bill of Lading, Phytosanitary Certificates, Certificate of Origin, Halal Certificates, Insurance.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-amber-500 text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <strong class="block text-emerald-800">Transit Times</strong>
+                                Middle East: 5-7 days | Africa: 10-15 days | Europe: 20-25 days | Asia: 7-14 days
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-emerald-900 mb-6 text-center">Shipping Partners & Services</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center p-4 bg-emerald-50 rounded-lg">
+                        <i class="fas fa-globe text-3xl text-emerald-700 mb-3"></i>
+                        <p class="font-semibold text-gray-700">Maersk Line</p>
+                    </div>
+                    <div class="text-center p-4 bg-emerald-50 rounded-lg">
+                        <i class="fas fa-globe text-3xl text-emerald-700 mb-3"></i>
+                        <p class="font-semibold text-gray-700">MSC</p>
+                    </div>
+                    <div class="text-center p-4 bg-emerald-50 rounded-lg">
+                        <i class="fas fa-globe text-3xl text-emerald-700 mb-3"></i>
+                        <p class="font-semibold text-gray-700">CMA CGM</p>
+                    </div>
+                    <div class="text-center p-4 bg-emerald-50 rounded-lg">
+                        <i class="fas fa-globe text-3xl text-emerald-700 mb-3"></i>
+                        <p class="font-semibold text-gray-700">Hapag-Lloyd</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-emerald-900 to-emerald-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Place an Order?</h2>
+            <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                Contact our operations team to discuss quantities, specifications, and shipping arrangements
+            </p>
+            <a href="contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-md text-lg font-semibold transition transform hover:scale-105">
+                Get Started
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        <i class="fas fa-seedling text-amber-500"></i> Ibraheem Industries
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Exporting Pakistan's premium harvest to the world with quality, integrity, and excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-amber-500">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-amber-500">Products</a></li>
+                        <li><a href="quality.html" class="hover:text-amber-500">Quality Assurance</a></li>
+                        <li><a href="sustainability.html" class="hover:text-amber-500">Sustainability</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#sugar" class="hover:text-amber-500">Sugar Import/Export</a></li>
+                        <li><a href="products.html#flour" class="hover:text-amber-500">Flour Import/Export</a></li>
+                        <li><a href="products.html#oil" class="hover:text-amber-500">Edible Oils</a></li>
+                        <li><a href="products.html#rice" class="hover:text-amber-500">Premium Rice</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Plot No. 56-B, Landhi Industrial Zone, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone text-amber-500 mr-2"></i> Tel: +92-21-5053786</li>
+                        <li><i class="fas fa-fax text-amber-500 mr-2"></i> Fax: +92-21-5056745</li>
+                        <li><i class="fas fa-envelope text-amber-500 mr-2"></i> ibraheemindustries@atomicmail.io</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-500">© 2026 Ibraheem Industries. All rights reserved. | Exporting Excellence Since 2006</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
